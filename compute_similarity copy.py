@@ -86,13 +86,12 @@ def compute_map(feats, labels):
 
 
 # load the data for visualizing the results
-data_dir = 'voc-pascal'
-
+data_dir = 'Paris'
 image_dir = os.path.join(data_dir, 'images')
 val_file = os.path.join(data_dir, 'list_of_images.txt')
-#
-DATASET = 'VOC-pascal'
-MODEL = 'resnet34'
+
+DATASET = 'paris'
+MODEL = 'clip'  # Changed to use CLIP by default
 feat_file = os.path.join('data', 'feat_{}_{}.npy'.format(MODEL, DATASET))
 if __name__ == '__main__' :
     with open(val_file, "r+") as file: 
